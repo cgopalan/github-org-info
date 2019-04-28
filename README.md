@@ -24,6 +24,23 @@ pip install -r requirements.txt
 python -m run 
 ```
 
+## Running tests
+
+You can run tests just using the unittest module in the standard library
+```
+python -m unittest -v
+```
+Or you can run it via pytest.
+
+Install pytest:
+```
+pip install pytest
+```
+Then run:
+```
+pytest -v
+```
+
 ### Making Requests
 
 ```
