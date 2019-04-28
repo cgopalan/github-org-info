@@ -1,3 +1,8 @@
+"""
+    Model classes that encapsulate results fetched from sources.
+    The code to transform data and compute aggregates and other results
+    needed by the client should be here.
+"""
 
 class GithubResults:
     
@@ -39,3 +44,7 @@ class GithubResults:
     def get_topics_info(self):
         """ To be implemented. """
         pass
+
+
+class BitbucketResults:
+    pass

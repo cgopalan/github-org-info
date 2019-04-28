@@ -1,3 +1,8 @@
+"""
+    Helper functions that either provide utility functions or help in generating
+    information for the endpoints in routes file.
+"""
+
 import requests
 from flask import current_app as app
 from flask import jsonify

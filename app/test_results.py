@@ -2,8 +2,9 @@ import unittest
 from .results import GithubResults
 from .testdata import TEST_ORG_DATA, TEST_REPO_DATA
 
-class GitHubResultsTest(unittest.TestCase):
-    
+class GithubResultsTest(unittest.TestCase):
+    """ Tests the GithubResults class. """
+
     def setUp(self):
         self.ghr = GithubResults(TEST_ORG_DATA, TEST_REPO_DATA)
 

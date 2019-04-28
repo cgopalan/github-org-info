@@ -1,3 +1,7 @@
+"""
+    Handles retry functionality for end points.
+
+"""
 
 def retry(logger, count=3):
     """ Decorator for retries """
