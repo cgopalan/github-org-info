@@ -24,6 +24,15 @@ pip install -r requirements.txt
 python -m run 
 ```
 
+### Making Requests
+
+```
+curl -i "http://127.0.0.1:5000/health-check"
+```
+
+For a list of endpoints, check out the [API documentation](apidocs.md)
+
+
 ## Running tests
 
 You can run tests just using the unittest module in the standard library
@@ -39,13 +48,6 @@ pip install pytest
 Then run:
 ```
 pytest -v
-```
-
-### Making Requests
-
-Check out the [API documentation](apidocs.md)
-```
-curl -i "http://127.0.0.1:5000/health-check"
 ```
 
 
