@@ -20,7 +20,7 @@ def health_check():
     app.logger.info("Health Check!")
     return Response("All Good!", status=200)
 
-@app.route("/api/v1/profile/<name>")
+@app.route("/api/v1/profiles/<name>")
 def get_profile(name):
     """
     Gets the merged bitbucket team and github org profile.
