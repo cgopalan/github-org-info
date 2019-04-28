@@ -3,15 +3,22 @@
 These are the endpoints that are available.
 
 
-## `GET /api/health-check`
+## `GET /health-check`
 
 A health check to see if the API is up and running.
+
+##### Requires Authentication: No
+
+##### PARAMS: None
+
+##### RESPONSE: All Good!
 
 
 ## `GET /api/v1/profiles/:name`
 
 Get the github profile for the organization. (In future will also get bitbucket info and merge the information)
-This requires authentication.
+
+##### Requires Authentication: Yes
 
 ##### PARAMS:
 
