@@ -26,6 +26,6 @@ Get the github profile for the organization. (In future will also get bitbucket 
 
 ##### RESPONSE:
 
-*  **`status`** - The status of the call. If it succeeds, it returns "success". Otherwise "error".
-*  **`message`** - The message returned. Returns "No records found" when there are no records, and the error message if there is an error.
+*  **`status`** - The status of the call. If it succeeds, it returns "success". Otherwise "error". Error may denote a client error or server error.
+*  **`message`** - The message returned. Returns "No records found" when there are no records, and a concise error message if there is an error.
 *  **`result`** - The result json that is returned when there are no errors. If there are errors, this will be null.

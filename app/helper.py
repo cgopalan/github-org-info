@@ -40,6 +40,8 @@ def get_github_profile(name):
     except requests.exceptions.HTTPError as e:
         if e.response.status_code in RETRY_ERROR_CODES:
             raise RetryError
+        elif e.response.status_code == 404:
+            raise OrgNotFoundError
 
 
 def get_bitbucket_team():
@@ -61,3 +63,7 @@ def build_response(response_template, status=None, message=None, result=None):
     response_template["message"] = message
     response_template["result"] = result
     return jsonify(response_template)
+
+class OrgNotFoundError(Exception):
+    """ Models an error denoting missing github organization. """
+    pass

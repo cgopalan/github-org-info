@@ -3,7 +3,7 @@ import logging
 import flask
 from flask import Response, jsonify
 import requests
-from .helper import get_github_profile, get_bitbucket_team, merge_info, build_response
+from .helper import get_github_profile, get_bitbucket_team, merge_info, build_response, OrgNotFoundError
 
 
 app = flask.Flask("user_profiles_api")
@@ -33,6 +33,9 @@ def get_profile(name):
     # Try getting github info
     try:
         gho = get_github_profile(name)
+    except OrgNotFoundError as e:
+        app.logger.error(f"Organization {name} not found in github")
+        return build_response(response_template, status="error", message=f"Organization {name} not found in github")
     except Exception as e:
         app.logger.error(f"Could not fetch data from github. Error was: {e}")
         return build_response(response_template, status="error", message="Could not fetch data from github")
