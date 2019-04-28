@@ -11,6 +11,7 @@ A health check to see if the API is up and running.
 ## `GET /api/v1/profiles/:name`
 
 Get the github profile for the organization. (In future will also get bitbucket info and merge the information)
+This requires authentication.
 
 ##### PARAMS:
 

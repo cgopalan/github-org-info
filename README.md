@@ -30,6 +30,10 @@ python -m run
 curl -i "http://127.0.0.1:5000/health-check"
 ```
 
+#### Authentication
+Some endpoints require authentication. For that, specify your github user and password (or a generated password token) in the [config file] (app/settings_default.py)
+
+#### Endpoints
 For a list of endpoints, check out the [API documentation](apidocs.md)
 
 
