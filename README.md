@@ -1,6 +1,6 @@
-# Coding Challenge App
+# Github Org Info
 
-A skeleton flask app to use for a coding challenge.
+A skeleton flask app that gets github org info.
 
 ## Install:
 
